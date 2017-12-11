@@ -1,8 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: 437919cf660dcb1eddc797243a35923f)
+# DO NOT EDIT (digest: feb5e9bcd1cc6c27571b0103980ef53e)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
+true: annot, bin_annot
 <**/.svn>: -traverse
 <**/.svn>: not_hygienic
 ".bzr": -traverse
@@ -21,11 +22,11 @@
 <test/test.{native,byte}>: package(should)
 <test/test.{native,byte}>: package(unix)
 <test/test.{native,byte}>: use_odate
-<test/*.ml{,i}>: package(lwt)
-<test/*.ml{,i}>: package(lwt.unix)
-<test/*.ml{,i}>: package(should)
-<test/*.ml{,i}>: package(unix)
-<test/*.ml{,i}>: use_odate
+<test/*.ml{,i,y}>: package(lwt)
+<test/*.ml{,i,y}>: package(lwt.unix)
+<test/*.ml{,i,y}>: package(should)
+<test/*.ml{,i,y}>: package(unix)
+<test/*.ml{,i,y}>: use_odate
 # OASIS_STOP
 true:use_menhir
 <src/js/*.ml{,i}>: syntax_camlp4o
